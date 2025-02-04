@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Plotzoblaster</title>
+	<script src="./js/jquery.min.js"></script>
+	<script src="./js/phaser.min.js"></script>
+	<script src="./js/emitter.js"></script>
+	<script src="./js/controller/controller.js"></script>
+	<script src="./js/controller/nosig.controller.js"></script>
+	<script src="./js/scene/nosig.scene.js"></script>
+	
+<style>
+body {
+	overflow: hidden;
+	background-color:#000000;
+	padding: 0px;
+	margin: 0px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+canvas {
+	margin: 0px !important;
+	padding: 0px;
+	width:100%;
+	height:100%; 
+}
+</style>
+</head>
+
+<body>
+
+<div style="position:absolute;right:0px;display:none;">
+	<span style="color:#ffffff;"><%= req.query.monitor %> 1280 x 800 <%= req.eye.x %>,<%= req.eye.y %></span>
+	<button style="width:80px;height:30px;" id="toggle">Toggle</button>
+</div>
+
+
+<script>
+
+var controller;
+var gui;
+	
+function init() {
+	controller=new Controller();
+ 
+	var guiConfig = {
+		type: Phaser.AUTO,
+		scene: [controller],
+		
+		render: {
+			antialias: true,
+			roundPixels: false
+		},
+		backgroundColor: '#000000',
+		scale: {
+			mode: Phaser.Scale.FIT,
+			autoCenter: Phaser.Scale.CENTER_BOTH,
+			width: 800,
+			height: 600
+		}, 
+			
+		dom: {
+			createContainer: true
+		}
+	};
+
+	gui = new Phaser.Game(guiConfig);
+}
+ 
+init();
+ 
+
+$("#toggle").click(function() {
+	if ( ! gui ) {
+		init();
+		 
+	} else {
+		//console.log(controller.lastTimer);
+		controller.destroy(true);
+	
+		gui.destroy(true);
+		gui=null;
+	}
+})
+</script>
+</body>
+</html>
