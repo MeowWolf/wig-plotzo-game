@@ -2,6 +2,8 @@ yarn.lock
 
 *.bbprojectd
 package-lock.json
+.DS_Store
+
 # Logs
 logs
 *.log
