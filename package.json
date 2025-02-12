@@ -1,17 +1,12 @@
 {
-  "name": "game-off-2017",
+  "name": "wig-plotzo-game",
   "version": "0.1.0",
-  "description": "Team Kickpunch's rocking entry",
+  "description": "Undermaller Brawler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/petarov/game-off-2017.git"
+    "url": "https://github.com/.git"
   },
   "contributors": [
-    "Alexey Vishnyakov <n3tn0de@gmail.com> (github.com/n3tn0de)",
-    "Carlos Braga <carlos.braga@admcsc.com.br> (github.com/charliiee)",
-    "Pavel Antonov <psyback@gmail.com> (github.com/PsyBack)",
-    "Petar Petrov <petar.petrov.georgiev@gmail.com> (github.com/petarov)",
-    "Will Tonna <will@lampeightaudio.com> (github.com/lampeight)"
   ],
   "license": "MIT",
   "private": true,
