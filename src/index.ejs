@@ -3,7 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html" />
-  <title>Undermaller Brawler</title>
+
+  <meta name="keywords" content="GitHubGameOff" />
+
+  <title>Game-Off 2017 Entry By Team Kickpunch</title>
+  <meta name="description" content="Team Kickpunch's rocking entry" />
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -22,20 +27,16 @@
         when Chrome's window resized to larger width
       */
       overflow: hidden;
+      background: #000000;
     }
 
     canvas {
-      pointer-events: none; /* fixes inability to regain keyboard focus
-        when game is loaded in iframe*/
+       
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border-left: 4px solid rgb(100, 100, 100);
-      border-top: 4px solid rgb(100, 100, 100);
-      border-right: 4px solid rgb(150, 150, 150);
-      border-bottom: 4px solid rgb(150, 150, 150);
-
+       
       /* Use nearest neighbor interpolation */
       /* https://stackoverflow.com/questions/7615009/disable-interpolation-when-scaling-a-canvas */
       /* https://stackoverflow.com/questions/14068103/disable-antialising-when-scaling-images */

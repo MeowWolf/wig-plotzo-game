@@ -17,12 +17,19 @@ const MainMenuConsts = {
 };
 
 class MainMenu extends Renderer {
+  down(item) {
 
+    console.log(item)
+
+  }
+  
   create() {
     super.create();
 
     const screenCenter = this.game.world.centerX;
-
+    
+    //console.log(Phaser.Mouse.start());
+    
     this.playIntro(screenCenter);
 
     // create a text for each option
@@ -32,15 +39,24 @@ class MainMenu extends Renderer {
     for(const [i, option] of MainMenuConsts.options.entries()) {
       const text = this.game.add.bitmapText(screenCenter, ypos + 24 * i, Globals.bitmapFont, option, 12);
       text.anchor.setTo(0.5);
+      
+      text.inputEnabled = true;
+       
+      text.events.onInputDown.add(this.down, this);
+      
       this.optionTexts.push(text);
     }
-
+    
+   // game.input.onDown.add(function() { alert("down") });
+    
     // stop all sfx in menu
     this.audio = new Audio(this.game);
     this.audio.stop();
 
     this.controls = new Controls(this.game, true);
   }
+
+  
 
   playIntro(screenCenter) {
     const SPEED = 2000;

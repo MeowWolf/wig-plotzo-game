@@ -64,15 +64,20 @@ class Preloader extends Renderer {
   create() {
     // remove loading bar from screen
     this._loadingBar.kill();
-
+    
+    
     // debug - start directly a game state
+    console.log(Globals)
     if (Globals.debug && Globals.state) {
       this.state.start(Globals.state);
     }
-
+    
     // set background to the game average color (optional)
     this.game.stage.backgroundColor = Globals.palette.menuBackground.hex;
+    this.state.start('mainmenu');
+    
 
+    /*
     // create splash screen
     const splashText = this.game.add.bitmapText(this.game.world.centerX,
       this.game.world.centerY, Globals.bitmapFont, 'TEAM KICKPUNCH', 20);
@@ -94,7 +99,7 @@ class Preloader extends Renderer {
         tween2.onComplete.add(() => {
         this.state.start('mainmenu');
       });
-    }, this);
+    }, this);*/
   }
 
 }
