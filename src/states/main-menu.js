@@ -11,8 +11,8 @@ const MainMenuConsts = {
   options: [
     'PLAY',
     'CONTROLS',
-    'AUDIO',
-    'CREDITS',
+   // 'AUDIO',
+  //  'CREDITS',
   ],
 };
 
@@ -35,9 +35,9 @@ class MainMenu extends Renderer {
     // create a text for each option
     this.selectedOption = 0;
     this.optionTexts = [];
-    let ypos = this.game.world.height / MainMenuConsts.options.length + 24;
+    let ypos = this.game.world.height / MainMenuConsts.options.length + 40;
     for(const [i, option] of MainMenuConsts.options.entries()) {
-      const text = this.game.add.bitmapText(screenCenter, ypos + 24 * i, Globals.bitmapFont, option, 12);
+      const text = this.game.add.bitmapText(screenCenter, ypos + 22 * i, Globals.bitmapFont, option, 12);
       text.anchor.setTo(0.5);
       
       text.inputEnabled = true;
