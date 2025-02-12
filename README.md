@@ -4,6 +4,7 @@
 
 Here are some hints.
 
+
   * Move, move, move. Don't let the enemies surround you. Try to stack them together and then hit them.
   * Kicks knock enemies back farther than punches, but they do less damage.
   * Get food to heal yourself. The bigger the dish, the more hitpoints you'll get restored. Also, make sure you look behind the objects in each level.
