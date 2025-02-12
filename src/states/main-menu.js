@@ -26,18 +26,19 @@ class MainMenu extends Renderer {
   create() {
     super.create();
 
-    const screenCenter = this.game.world.centerX;
-    
+    const screenCenterX = this.game.world.centerX;
+    const screenCenterY = this.game.world.centerY;
+   // console.log("!"+this.game.world.centerX)
     //console.log(Phaser.Mouse.start());
     
-    this.playIntro(screenCenter);
+    this.playIntro(screenCenterX);
 
     // create a text for each option
     this.selectedOption = 0;
     this.optionTexts = [];
     let ypos = this.game.world.height / MainMenuConsts.options.length + 40;
     for(const [i, option] of MainMenuConsts.options.entries()) {
-      const text = this.game.add.bitmapText(screenCenter, ypos + 22 * i, Globals.bitmapFont, option, 12);
+      const text = this.game.add.bitmapText(screenCenterX, ypos + 22 * i, Globals.bitmapFont, option, 12);
       text.anchor.setTo(0.5);
       
       text.inputEnabled = true;
@@ -56,26 +57,42 @@ class MainMenu extends Renderer {
     this.controls = new Controls(this.game, true);
   }
 
-  
+  shakeScreen() {
+     this.game.camera.shake(0.01, 250);
+   
+  }
 
-  playIntro(screenCenter) {
-    const SPEED = 2000;
+  playIntro(screenCenterX) {
+    const SPEED = 1200;
     
-    
+    this.game.add.image(0,0, 'background'); 
     this.game.add.image((240-142)/2, 2, 'undermaller'); 
     
-   /* const menuTitleLeft = this.game.add.bitmapText(screenCenter, 30, 
+    const brawler = this.game.add.image(screenCenterX+8,84, 'brawler');
+    brawler.anchor.setTo(0.5);
+    brawler.scale.setTo(10,10);
+    brawler.angle=-140;
+    brawler.alpha=0;
+    this.game.add.tween(brawler.scale).to({ x: 1, y:1}, SPEED, Phaser.Easing.Sinusoidal.In, true);
+    this.game.add.tween(brawler).to({ angle:0}, SPEED, Phaser.Easing.Quadratic.In, true);
+    this.game.add.tween(brawler).to({ alpha:1}, SPEED, Phaser.Easing.Quadratic.In, true);
+    
+     this.game.time.events.add(SPEED, this.shakeScreen, this);
+      this.game.time.events.start();
+      
+      
+   /* const menuTitleLeft = this.game.add.bitmapText(screenCenterX, 30, 
       Globals.bitmapFont, 'Kick', 30);
     menuTitleLeft.anchor.setTo(0.5);
     menuTitleLeft.right = 0;
-    this.game.add.tween(menuTitleLeft).to({ x: screenCenter - 50}, SPEED, 
+    this.game.add.tween(menuTitleLeft).to({ x: screenCenterX - 50}, SPEED, 
       Phaser.Easing.Bounce.Out, true);
 
-    const menuTitleRight = this.game.add.bitmapText(screenCenter, 30, 
+    const menuTitleRight = this.game.add.bitmapText(screenCenterX, 30, 
       Globals.bitmapFont, 'Punch', 30);
     menuTitleRight.anchor.setTo(0.5);
     menuTitleRight.left = this.game.width;
-    this.game.add.tween(menuTitleRight).to({ x: screenCenter + 50}, SPEED, 
+    this.game.add.tween(menuTitleRight).to({ x: screenCenterX + 50}, SPEED, 
       Phaser.Easing.Bounce.Out, true);*/
       
   }

@@ -36,7 +36,13 @@ class Preloader extends Renderer {
 
     // load images
     this.game.load.image('arrow', require('../assets/images/arrow.png'));
-    this.game.load.image('undermaller', require('../assets/undermallerbrawler.png'));
+   
+   //title
+    this.game.load.image('undermaller', require('../assets/title/undermaller.png'));
+    this.game.load.image('brawler', require('../assets/title/brawler.png'));
+    this.game.load.image('background', require('../assets/title/background.png'));
+  
+    this.game.stage.smoothed = false;
 
     // load levels
     this.game.load.image('gd-tiles', require('../assets/levels/gd-tileset.png'));
