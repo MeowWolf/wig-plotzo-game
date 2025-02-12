@@ -60,8 +60,11 @@ class MainMenu extends Renderer {
 
   playIntro(screenCenter) {
     const SPEED = 2000;
-
-    const menuTitleLeft = this.game.add.bitmapText(screenCenter, 30, 
+    
+    
+    this.game.add.image((240-142)/2, 2, 'undermaller'); 
+    
+   /* const menuTitleLeft = this.game.add.bitmapText(screenCenter, 30, 
       Globals.bitmapFont, 'Kick', 30);
     menuTitleLeft.anchor.setTo(0.5);
     menuTitleLeft.right = 0;
@@ -73,7 +76,8 @@ class MainMenu extends Renderer {
     menuTitleRight.anchor.setTo(0.5);
     menuTitleRight.left = this.game.width;
     this.game.add.tween(menuTitleRight).to({ x: screenCenter + 50}, SPEED, 
-      Phaser.Easing.Bounce.Out, true);
+      Phaser.Easing.Bounce.Out, true);*/
+      
   }
 
   update() {
