@@ -138,7 +138,8 @@ class MainMenu extends Renderer {
       this.audio.play(this.audio.sfx.go);
 
 //      this.state.start('loading', true, false, 'intro');
-      this.state.start('act1');
+      this.state.start('loading', true, false, 'act1');
+     // this.state.start('act1');
     }
 
     // start option state
