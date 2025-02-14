@@ -43,7 +43,7 @@ class Hero extends Actor {
         'hero_punch_02',
       ], 12, false),
       kick: anims.add('kick', [
-        ...Phaser.Animation.generateFrameNames('hero_kick_', 1, 3, '', 2),
+        ...Phaser.Animation.generateFrameNames('hero_punch_', 1, 3, '', 2),
         'hero_kick_02',
       ], 9, false),
       jump: anims.add('jump', [
@@ -236,18 +236,18 @@ class Hero extends Actor {
   }
 
   faceLeft() {
-    this._sprite.scale.x = 1;
-    // mirror hitboxes
-    for (const h of this.hitboxes.children) {
-      h.scale.x = -1;
-    }
-  }
-
-  faceRight() {
     this._sprite.scale.x = -1;
     // mirror hitboxes
     for (const h of this.hitboxes.children) {
       h.scale.x = 1;
+    }
+  }
+
+  faceRight() {
+    this._sprite.scale.x = 1;
+    // mirror hitboxes
+    for (const h of this.hitboxes.children) {
+      h.scale.x = -1;
     }
   }
 

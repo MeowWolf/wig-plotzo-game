@@ -34,20 +34,21 @@ const TileMapConsts = {
   pos: (x) => x * 48,
   // mapping of tiled actors to objects
   ACTORS: {
-    HERO: { name: 'hero', classType: Hero, frame: 'hero_stand_01' },
-    GLORIA: { name: 'gloria', classType: Gloria, frame: 'gloria_stand_01' },
-    DIDO: { name: 'dido', classType: Dido, frame: 'dog_stand_01' },
-    P1: { name: 'p1', classType: FoeP1, frame: 'foe_stand_01' },
-    P2: { name: 'p2', classType: FoeP2, frame: 'elite1_stand_01' },
-    K1: { name: 'k1', classType: FoeK1, frame: 'foe2_stand_01' },
-    K2: { name: 'k2', classType: FoeK2, frame: 'elite2_stand_01' },
-    ARKIAN: { name: 'arkian', classType: Arkian, frame: 'arkian_stand_01' },
+    HERO: { name: 'hero', classType: Hero, frame: 'hero_stand_01', source: 'plotzo_sprites' },
+    GLORIA: { name: 'gloria', classType: Gloria, frame: 'gloria_stand_01', source: 'atlas_sprites'  },
+    DIDO: { name: 'dido', classType: Dido, frame: 'dog_stand_01', source: 'atlas_sprites'  },
+    P1: { name: 'p1', classType: FoeP1, frame: 'foe_stand_01', source: 'atlas_sprites'  },
+    P2: { name: 'p2', classType: FoeP2, frame: 'elite1_stand_01', source: 'atlas_sprites'  },
+    K1: { name: 'k1', classType: FoeK1, frame: 'foe2_stand_01', source: 'atlas_sprites'  },
+    K2: { name: 'k2', classType: FoeK2, frame: 'elite2_stand_01', source: 'atlas_sprites'  },
+    ARKIAN: { name: 'arkian', classType: Arkian, frame: 'arkian_stand_01', source: 'atlas_sprites'  },
   }
 };
 
 class GamePlay extends Renderer {
 
   create(level) {
+    
     // difficulty level (atm, each act should increase this by one)
     this._level = level;
 
@@ -211,10 +212,11 @@ class GamePlay extends Renderer {
 
   _placeActors(map) {
     const actorsGroup = this.add.group();
-
+  console.log("_placeActors")
     for (const [k, v] of Object.entries(TileMapConsts.ACTORS)) {
+      console.log(k,v)
       this.map.createFromObjects(TileMapConsts.OBJECTS_ACTORS,
-        v.name, 'atlas_sprites', v.frame, true, true, actorsGroup,
+        v.name, v.source, v.frame, true, true, actorsGroup,
         Phaser.Sprite, false, false);
     }
 

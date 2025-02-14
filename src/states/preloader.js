@@ -41,6 +41,7 @@ class Preloader extends Renderer {
     this.game.load.image('undermaller', require('../assets/title/undermaller.png'));
     this.game.load.image('brawler', require('../assets/title/brawler.png'));
     this.game.load.image('background', require('../assets/title/background.png'));
+    this.game.load.image('titlearrow', require('../assets/title/arrow.png'));
   
     this.game.stage.smoothed = false;
 
@@ -65,6 +66,13 @@ class Preloader extends Renderer {
       require('../assets/sprites/sprites.png'),
       require('file-loader!../assets/sprites/sprites.json'),
       Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+      
+    
+    this.load.atlas('plotzo_sprites',
+      require('../assets/sprites/plotzo.png'),
+      require('file-loader!../assets/sprites/plotzo.json'),
+      Phaser.Loader.TEXTURE_ATLAS_JSON_HASH);
+        
 
   }
 
@@ -77,12 +85,12 @@ class Preloader extends Renderer {
     console.log(Globals)
     if (Globals.debug && Globals.state) {
       this.state.start(Globals.state);
-    }
+    } else {
     
     // set background to the game average color (optional)
     this.game.stage.backgroundColor = Globals.palette.menuBackground.hex;
     this.state.start('mainmenu');
-    
+    }
 
     /*
     // create splash screen

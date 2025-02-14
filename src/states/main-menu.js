@@ -38,7 +38,7 @@ class MainMenu extends Renderer {
     this.optionTexts = [];
     let ypos = this.game.world.height / MainMenuConsts.options.length + 40;
     for(const [i, option] of MainMenuConsts.options.entries()) {
-      const text = this.game.add.bitmapText(screenCenterX, ypos + 22 * i, Globals.bitmapFont, option, 12);
+      const text = this.game.add.bitmapText(screenCenterX, ypos + 22 * i, Globals.bitmapFont, option, 14);
       text.anchor.setTo(0.5);
       
       text.inputEnabled = true;
@@ -67,6 +67,9 @@ class MainMenu extends Renderer {
     
     this.game.add.image(0,0, 'background'); 
     this.game.add.image((240-142)/2, 2, 'undermaller'); 
+    
+    this.game.add.image(0, 20, 'titlearrow'); 
+    
     
     const brawler = this.game.add.image(screenCenterX+8,84, 'brawler');
     brawler.anchor.setTo(0.5);
@@ -104,7 +107,7 @@ class MainMenu extends Renderer {
       if(i == this.selectedOption)
         option.tint = 0x000000;
       else
-        option.tint = 0xffffff;
+        option.tint = 0x666666;
     }
 
     this.handleInput();
@@ -134,7 +137,8 @@ class MainMenu extends Renderer {
       // play sfx
       this.audio.play(this.audio.sfx.go);
 
-      this.state.start('loading', true, false, 'intro');
+//      this.state.start('loading', true, false, 'intro');
+      this.state.start('act1');
     }
 
     // start option state
