@@ -183,7 +183,8 @@ class Hero extends Actor {
       this.kill();
     } else {
       this.stop(null)
-      this._sprite.animations.play('hit');
+      
+      //this._sprite.animations.play('hit');
 
       // shake the screen a bit
       this.game.camera.shake(0.001, 100);
@@ -240,7 +241,7 @@ class Hero extends Actor {
     this._sprite.scale.x = -1;
     // mirror hitboxes
     for (const h of this.hitboxes.children) {
-      h.scale.x = 1;
+      h.scale.x = -1;
     }
   }
 
@@ -248,7 +249,7 @@ class Hero extends Actor {
     this._sprite.scale.x = 1;
     // mirror hitboxes
     for (const h of this.hitboxes.children) {
-      h.scale.x = -1;
+      h.scale.x = 1;
     }
   }
 
