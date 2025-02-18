@@ -59,7 +59,7 @@ class Audio {
         act2: 'GO17-Act2_aac.m4a',
         act3: 'GO17-Act3_aac.m4a',
         boss: 'GO17-Boss_aac.m4a',
-        maintheme: 'GO17-MainTheme_aac.m4a',
+        maintheme: 'plotzo-maintheme.m4a',
         fanfare: 'GO17-Fanfare_aac.m4a'
       };
 
