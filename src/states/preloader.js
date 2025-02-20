@@ -41,7 +41,13 @@ class Preloader extends Renderer {
     this.game.load.image('undermaller', require('../assets/title/undermaller.png'));
     this.game.load.image('brawler', require('../assets/title/brawler.png'));
     this.game.load.image('background', require('../assets/title/background.png'));
-    this.game.load.image('titlearrow', require('../assets/title/arrow.png'));
+    //this.game.load.image('titlearrow', require('../assets/title/arrow.png'));
+    
+    this.game.load.image('play-on', require('../assets/title/play-on.png'));
+    this.game.load.image('play-off', require('../assets/title/play-off.png'));
+    
+    this.game.load.image('instructions-on', require('../assets/title/instructions-on.png'));
+    this.game.load.image('instructions-off', require('../assets/title/instructions-off.png'));
   
     this.game.stage.smoothed = false;
 
@@ -52,7 +58,7 @@ class Preloader extends Renderer {
       require('file-loader!../assets/levels/intro.json'), null,
       Phaser.Tilemap.TILED_JSON);
     this.game.load.tilemap('act1',
-      require('file-loader!../assets/levels/act1.json'), null,
+      require('file-loader!../assets/levels/act1-new2.json'), null,
       Phaser.Tilemap.TILED_JSON);
     this.game.load.tilemap('act2',
       require('file-loader!../assets/levels/act2.json'), null,

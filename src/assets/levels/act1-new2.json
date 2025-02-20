@@ -1,9 +1,15 @@
-{ "height":5,
+{ "compressionlevel":-1,
+ "height":5,
+ "infinite":false,
  "layers":[
         {
-         "data":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
-         "encoding":"base64",
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 34, 0, 0, 0, 0, 0, 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":5,
+         "id":1,
          "name":"paralax",
          "opacity":1,
          "type":"tilelayer",
@@ -13,9 +19,13 @@
          "y":0
         }, 
         {
-         "data":"DAAAAAwAAAAPAAAAEAAAABAAAAAQAAAAEAAAABAAAAAPAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAZAAAAGgAAABsAAAAQAAAAGwAAAB0AAAAQAAAAGgAAABcAAAAZAAAADAAAAAwAAAAMAAAADAAAAAwAAAANAAAADAAAAAwAAAANAAAADAAAAAwAAAAMAAAADAAAABkAAAAnAAAAJgAAACQAAAAmAAAAJgAAACQAAAAkAAAAJwAAACcAAAAlAAAAJwAAACUAAAAnAAAAJwAAACcAAAAlAAAAJwAAACcAAAAlAAAAJQAAACYAAAAlAAAAJwAAACUAAAAlAAAALwAAAC8AAAAvAAAALwAAADEAAAAvAAAALwAAADAAAAAwAAAAMAAAADAAAAAvAAAALwAAAC8AAAAvAAAAMQAAAC8AAAAwAAAAMAAAAC8AAAAwAAAAMAAAADAAAAAyAAAAMAAAAC8AAAAvAAAAMgAAAC8AAAAvAAAALwAAAC8AAAAvAAAALwAAADEAAAAvAAAALwAAAC8AAAAvAAAALwAAAC8AAAAwAAAAMAAAAC8AAAAvAAAALwAAAC8AAAAwAAAALwAAADEAAAA=",
-         "encoding":"base64",
+         "data":[12, 12, 15, 16, 16, 16, 16, 16, 15, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12,
+            12, 25, 26, 27, 16, 27, 29, 16, 26, 23, 25, 12, 12, 12, 12, 12, 13, 12, 12, 13, 12, 12, 12, 12, 25,
+            39, 38, 36, 38, 38, 36, 36, 39, 39, 37, 39, 37, 39, 39, 39, 37, 39, 39, 37, 37, 38, 37, 39, 37, 37,
+            47, 47, 47, 47, 49, 47, 47, 48, 48, 48, 48, 47, 47, 47, 47, 49, 47, 48, 48, 47, 48, 48, 48, 50, 48,
+            47, 47, 50, 47, 47, 47, 47, 47, 47, 49, 47, 47, 47, 47, 47, 47, 48, 48, 47, 47, 47, 47, 48, 47, 49],
          "height":5,
+         "id":2,
          "name":"background",
          "opacity":1,
          "type":"tilelayer",
@@ -25,9 +35,13 @@
          "y":0
         }, 
         {
-         "data":"AAAAAAAAAAATAAAAAAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAEAAAADAAAAKQAAAAQAAAACAAAAAAAAAD0AAAAAAAAAHwAAAAAAAAAFAAAABAAAAAkAAAAAAAAAPAAAAAAAAAAAAAAAAAAAAAMAAAAAAAAAPgAAAD8AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
-         "encoding":"base64",
+         "data":[0, 0, 19, 0, 0, 4, 0, 4, 0, 4, 0, 0, 0, 4, 0, 4, 0, 4, 0, 4, 0, 4, 0, 0, 0,
+            1, 3, 41, 4, 2, 0, 61, 0, 31, 0, 5, 4, 9, 0, 60, 0, 0, 0, 3, 0, 62, 63, 0, 1, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 40, 0, 0, 0, 0, 0, 0, 0, 42, 0, 0, 0, 0, 0, 0, 0, 40, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":5,
+         "id":3,
          "name":"background-items",
          "opacity":1,
          "type":"tilelayer",
@@ -37,9 +51,13 @@
          "y":0
         }, 
         {
-         "data":"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5AAAALQAAAAAAAAAuAAAAIwAAADMAAAA0AAAAAAAAADgAAAA6AAAAIwAAAC4AAAAAAAAAHgAAACMAAAAAAAAAMwAAADQAAAAeAAAAIwAAAAAAAAAAAAAAAAAAAB4AAAA5AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
-         "encoding":"base64",
+         "data":[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            57, 45, 0, 46, 35, 51, 52, 0, 56, 58, 35, 46, 0, 30, 35, 0, 51, 52, 30, 35, 0, 0, 0, 30, 57,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+            0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
          "height":5,
+         "id":4,
          "name":"foreground",
          "opacity":1,
          "type":"tilelayer",
@@ -50,6 +68,7 @@
         }, 
         {
          "draworder":"topdown",
+         "id":5,
          "name":"obstacles",
          "objects":[
                 {
@@ -171,7 +190,7 @@
                  "visible":true,
                  "width":66,
                  "x":254,
-                 "y":123
+                 "y":133
                 }, 
                 {
                  "height":16,
@@ -182,7 +201,7 @@
                  "visible":true,
                  "width":66,
                  "x":782,
-                 "y":123
+                 "y":133
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -192,6 +211,7 @@
         }, 
         {
          "draworder":"topdown",
+         "id":6,
          "name":"collectables",
          "objects":[
                 {
@@ -235,6 +255,7 @@
         }, 
         {
          "draworder":"topdown",
+         "id":7,
          "name":"actors",
          "objects":[
                 {
@@ -388,6 +409,7 @@
         }, 
         {
          "draworder":"topdown",
+         "id":8,
          "name":"hotpoints",
          "objects":[
                 {
@@ -440,10 +462,11 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":49,
+ "nextlayerid":10,
+ "nextobjectid":61,
  "orientation":"orthogonal",
  "renderorder":"right-down",
- "tiledversion":"1.0.3",
+ "tiledversion":"1.11.2",
  "tileheight":48,
  "tilesets":[
         {
@@ -462,6 +485,6 @@
         }],
  "tilewidth":48,
  "type":"map",
- "version":1,
+ "version":"1.10",
  "width":25
 }

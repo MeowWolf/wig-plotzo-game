@@ -28,17 +28,19 @@ class MainMenu extends Renderer {
 
     const screenCenterX = this.game.world.centerX;
     const screenCenterY = this.game.world.centerY;
-   // console.log("!"+this.game.world.centerX)
-    //console.log(Phaser.Mouse.start());
+  
     
-    this.playIntro(screenCenterX);
-
     // create a text for each option
     this.selectedOption = 0;
+    this.menuButtons=[];
+    this.playIntro(screenCenterX);
+
+   
     this.optionTexts = [];
     let ypos = this.game.world.height / MainMenuConsts.options.length + 40;
     for(const [i, option] of MainMenuConsts.options.entries()) {
       const text = this.game.add.bitmapText(screenCenterX, ypos + 22 * i, Globals.bitmapFont, option, 14);
+      text.alpha=0;
       text.anchor.setTo(0.5);
       
       text.inputEnabled = true;
@@ -61,6 +63,17 @@ class MainMenu extends Renderer {
      this.game.camera.shake(0.01, 250);
    
   }
+  
+  selectOption(n) {
+    this.menuButtons[0][0].visible=true;
+    this.menuButtons[0][1].visible=false;
+    this.menuButtons[1][0].visible=true;
+    this.menuButtons[1][1].visible=false;
+    
+    this.menuButtons[n][1].visible=true;
+    
+          
+  }
 
   playIntro(screenCenterX) {
     const SPEED = 1200;
@@ -68,7 +81,34 @@ class MainMenu extends Renderer {
     this.game.add.image(0,0, 'background'); 
     this.game.add.image((240-142)/2, 2, 'undermaller'); 
     
-    this.game.add.image(0, 20, 'titlearrow'); 
+  //  this.game.add.image(screenCenterX, 118, 'play').anchor.setTo(0.5); 
+  
+    var playBtns=[
+      this.game.add.image(screenCenterX, 118, 'play-off'),
+      this.game.add.image(screenCenterX, 118, 'play-on')
+    ];
+    playBtns[1].visible=false;
+    playBtns[0].anchor.setTo(0.5);
+    playBtns[1].anchor.setTo(0.5);
+    
+    
+    var instructionBtns=[
+      this.game.add.image(screenCenterX, 142, 'instructions-off'),
+      this.game.add.image(screenCenterX, 142, 'instructions-on')
+    ];
+    instructionBtns[1].visible=false;
+    instructionBtns[0].anchor.setTo(0.5);
+    instructionBtns[1].anchor.setTo(0.5);
+    
+    this.menuButtons=[playBtns, instructionBtns];
+    
+    //  console.log(this.menuButtons);
+  
+  
+    //this.ins.anchor.setTo(0.5);
+    //console.log(this.ins)
+    //this.ins.visible=false;
+
     
     
     const brawler = this.game.add.image(screenCenterX+8,84, 'brawler');
@@ -83,7 +123,7 @@ class MainMenu extends Renderer {
      this.game.time.events.add(SPEED, this.shakeScreen, this);
       this.game.time.events.start();
       
-      
+      this.selectOption(0);
    /* const menuTitleLeft = this.game.add.bitmapText(screenCenterX, 30, 
       Globals.bitmapFont, 'Kick', 30);
     menuTitleLeft.anchor.setTo(0.5);
@@ -102,15 +142,19 @@ class MainMenu extends Renderer {
 
   update() {
     super.update();
-
-    for(const [i, option] of this.optionTexts.entries()) {
+    
+    this.handleInput();
+     
+    this.selectOption(this.selectedOption);
+    
+   /* for(const [i, option] of this.optionTexts.entries()) {
       if(i == this.selectedOption)
         option.tint = 0x000000;
       else
         option.tint = 0x666666;
     }
-
-    this.handleInput();
+*/
+   
   }
 
   handleInput() {
@@ -127,8 +171,8 @@ class MainMenu extends Renderer {
 
     if(this.selectedOption < 0)
       this.selectedOption = 0;
-    if(this.selectedOption >= MainMenuConsts.options.length)
-      this.selectedOption = MainMenuConsts.options.length - 1;
+    if(this.selectedOption >= this.menuButtons.length)
+      this.selectedOption = this.menuButtons.length - 1;
   }
 
   chooseOption() {
